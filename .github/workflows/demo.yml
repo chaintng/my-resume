@@ -8,5 +8,7 @@ jobs:
       volumes:
         - ${{ github.workspace }}:/build
     steps:
+      - run: pwd
+      - run: cd /build
       - run: ls
       - run: pandoc --help
