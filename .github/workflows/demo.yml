@@ -6,7 +6,7 @@ jobs:
     container: 
       image: kannkyo/pandoc-wkhtmltopdf
       volumes:
-        - $GITHUB_WORKSPACE:/build
+        - ${{ github.workspace }}:/build
     steps:
       - run: ls
       - run: pandoc --help
