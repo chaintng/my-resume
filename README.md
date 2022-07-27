@@ -15,9 +15,9 @@ Skills
 --------
 #### DevOps
 - Responsibility for implement full CI/CD pipeline of multiple services (Build, Test, Release).
-- Introduce infrastructure-as-Code to team using Terraform, Ansible, Dockerfile, GitHub/GitLab CI.
+- Introduce infrastructure-as-Code to team (Terraform, Ansible, Dockerfile, GitHub/GitLab CI).
 - Strong knowledge on Developer & Operation Tools including  .Grafana, Kubernetes, CDN, ElasticSearch, Hadoop, Linux command etc.
-- Strong experience with Amazon Web Services, Google Cloud Platform (VMs, CDN, Load Balancer, DNS, Security).
+- Strong experience with Amazon Web Services, Google Cloud Platform.
 
 #### Javascript / node.js
 - Building up new microservices using node.js to serve global-scale users, fast and support high concurrency. Deliver work with automated test (Unit, Contract, System Test, Load Test).
@@ -25,7 +25,6 @@ Skills
 
 #### Database
 - Deep understanding in SQL Query and Store Procedure (MySQL, Postgres, PostGIS).
-- Fair experience in NoSQL database (Redis, MongoDB, ElasticSearch).
 - Database tuning: indexing, query optimization, restructuring.
 
 
@@ -48,8 +47,7 @@ Experience
 - Live migrating systems from Amazon Web Service (AWS) to Google Cloud Platform (GCP).
 - Introduce continuous integration and ensure development cycle is as fast as possible.
 - Ensure high system reliability by utilizing tools for monitoring, tracing and alerting.
-- Developing application using different programming language from Node.JS, PHP, React.
 
 Education
 ---------
-**KMUTT, Thailand — Master Degree** (2014): Software Technology, School of Information Technology 
+**KMUTT, TH — Master Degree** (2014): Software Technology, School of Information Technology 

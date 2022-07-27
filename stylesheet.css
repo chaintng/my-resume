@@ -461,9 +461,14 @@ html, body {
 }
 
 img[alt="Photo"] {
-    width: 100px;
+    width: 120px;
     position: absolute;
-    right: 0px;
+    right: 30px;
+    top: 15px;
+}
+
+figcaption {
+    display: none;
 }
 
 *:not('#mkdbuttons') {
@@ -493,7 +498,7 @@ a {
 
 body {
     background-color: #fff;
-    padding: 20px 30px;
+    padding: 20px 30px 0px;
     margin: 0px;
     font-size: 14px;
     line-height: 1.6

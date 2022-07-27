@@ -28,6 +28,7 @@ jobs:
           path: |
             stylesheet.css
             resume.html
+            photo.jpg
       ## TODO Deploy in Pages
       # - name: Deploy 🚀
       #   uses: JamesIves/github-pages-deploy-action@v4
