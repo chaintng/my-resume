@@ -1,4 +1,6 @@
-name: GitHub Actions Demo
+## Inspiration from https://github.com/sdsawtelle/markdown-resume
+
+name: Create Resume
 on: [push]
 jobs:
   build_resume:
@@ -9,6 +11,7 @@ jobs:
         - ${{ github.workspace }}:/build:rw
     steps:
       - uses: actions/checkout@v2
+      - run: pandoc --help
       - run: pandoc --standalone -o resume.html -c resume-css-stylesheet.css README.md
       ## TODO run on linux
       # - run: docker run 
