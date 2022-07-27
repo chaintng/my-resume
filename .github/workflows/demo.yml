@@ -12,7 +12,7 @@ jobs:
       # - run: pandoc -o resume.html -c resume-css-stylesheet.css README.md
       - run: docker run
           -v ${{ github.workspace }}:/build
-          --entrypoint sh
+          --entrypoint "sh -c"
           kannkyo/pandoc-wkhtmltopdf:latest 
           "pandoc -o resume.html -c resume-css-stylesheet.css README.md"
       - name: Upload Resume artifacts
