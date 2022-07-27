@@ -11,4 +11,5 @@ jobs:
       - run: cd /build
       - run: pwd
       - run: ls
+      - run: cat README.md
       - run: pandoc --help
