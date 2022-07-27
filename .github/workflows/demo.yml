@@ -15,3 +15,8 @@ jobs:
         with:
           name: resume.html
           path: resume.html
+      - run: mkdir build && mv resume.html build/resume.html
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.
