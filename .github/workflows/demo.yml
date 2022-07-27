@@ -20,7 +20,7 @@ jobs:
       #     kannkyo/pandoc-wkhtmltopdf:latest 
       #     "pandoc -o resume.html -c resume-css-stylesheet.css README.md"
       - run: ls
-      - run: wkhtmltopdf resume.html resume.pdf 
+      - run: wkhtmltopdf resume4.html resume.pdf 
       - name: Upload Resume artifacts
         uses: actions/upload-artifact@v3
         with:
