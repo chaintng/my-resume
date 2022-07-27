@@ -1,7 +1,7 @@
-name: Creating Resume
+name: GitHub Actions Demo
 on: [push]
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - pandoc --help
+jobs:
+  build_resume:
+    container: kannkyo/pandoc-wkhtmltopdf
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
