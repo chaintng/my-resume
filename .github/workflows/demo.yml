@@ -19,6 +19,7 @@ jobs:
       #     --entrypoint "sh -c"
       #     kannkyo/pandoc-wkhtmltopdf:latest 
       #     "pandoc -o resume.html -c resume-css-stylesheet.css README.md"
+      - run: ls
       - name: Upload Resume artifacts
         uses: actions/upload-artifact@v3
         with:
