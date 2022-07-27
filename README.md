@@ -1,3 +1,4 @@
+![Photo](./photo.jpg)
 Chainarong Tangsurakit
 ======
 *Remark: This resume was generated using GitLab Action CI/CD*
