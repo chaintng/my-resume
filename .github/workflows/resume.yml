@@ -1,0 +1,36 @@
+## Inspiration from https://github.com/sdsawtelle/markdown-resume
+
+name: Create Resume
+on: [push]
+jobs:
+  build_resume:
+    runs-on: ubuntu-latest
+    container: 
+      image: kannkyo/pandoc-wkhtmltopdf
+      volumes:
+        - ${{ github.workspace }}:/build:rw
+    steps:
+      - uses: actions/checkout@v2
+      - run: pandoc --help
+      - run: pandoc --standalone -c stylesheet.css README.md -o resume.html
+      ## TODO run on linux
+      # - run: docker run 
+      #     -v ${{ github.workspace }}:/build
+      #     --entrypoint "sh -c"
+      #     kannkyo/pandoc-wkhtmltopdf:latest 
+      #     "pandoc -o resume.html -c resume-css-stylesheet.css README.md"
+      ## TODO wkhtmltopdf doesn't work on 64bit
+      # - run: wkhtmltopdf resume4.html resume.pdf 
+      - name: Upload Resume artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume
+          path: |
+            stylesheet.css
+            resume.html
+            photo.jpg
+      ## TODO Deploy in Pages
+      # - name: Deploy 🚀
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     folder: build # The folder the action should deploy.
