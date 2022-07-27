@@ -3,7 +3,10 @@ on: [push]
 jobs:
   build_resume:
     runs-on: ubuntu-latest
-    container: kannkyo/pandoc-wkhtmltopdf
+    container: 
+      image: kannkyo/pandoc-wkhtmltopdf
+      volumes:
+        - $GITHUB_WORKSPACE:/build
     steps:
       - run: ls
       - run: pandoc --help
