@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     container: kannkyo/pandoc-wkhtmltopdf
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: ls
+      - run: pandoc --help
