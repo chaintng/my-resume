@@ -3,13 +3,16 @@ on: [push]
 jobs:
   build_resume:
     runs-on: ubuntu-latest
-    container: 
-      image: kannkyo/pandoc-wkhtmltopdf
-      volumes:
-        - ${{ github.workspace }}:/build:rw
+    # container: 
+    #   image: kannkyo/pandoc-wkhtmltopdf
+    #   volumes:
+    #     - ${{ github.workspace }}:/build:rw
     steps:
       - uses: actions/checkout@v2
-      - run: pandoc -o resume.html -c resume-css-stylesheet.css README.md
+      # - run: pandoc -o resume.html -c resume-css-stylesheet.css README.md
+      - run: docker run \
+        -v ${{ github.workspace }}:/build \
+        kannkyo/pandoc-wkhtmltopdf:latest "pandoc -o resume.html -c resume-css-stylesheet.css README.md"
       - name: Upload Resume artifacts
         uses: actions/upload-artifact@v3
         with:
