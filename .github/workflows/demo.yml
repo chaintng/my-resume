@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pandoc --help
-      - run: pandoc --standalone -o resume.html -c resume-css-stylesheet.css README.md
+      - run: pandoc --standalone -c resume-css-stylesheet.css README.md -o resume.html
       ## TODO run on linux
       # - run: docker run 
       #     -v ${{ github.workspace }}:/build
