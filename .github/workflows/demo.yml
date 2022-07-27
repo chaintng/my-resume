@@ -9,9 +9,9 @@ jobs:
         - ${{ github.workspace }}:/build:rw
     steps:
       - uses: actions/checkout@v2
-      - run: pwd
-      - run: cd /build
-      - run: pwd
-      - run: ls
-      - run: cat README.md
-      - run: pandoc --help
+      - run: pandoc -o resume.html -c resume-css-stylesheet.css README.md
+      - name: Upload Resume artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume.html
+          path: resume.html
