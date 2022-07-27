@@ -11,8 +11,8 @@ A software engineer who like cracking problem in a logical and creative way.
 Skills
 --------
 #### DevOps
-- Responsibility for implement full CI/CD pipeline of multiple services, both frontend and backend. (Build, Test, Release).
-- Introduce infrastructure-as-a-code to the team using Terraform, Ansible, Dockerfile, GitHub Action, GitLab CI.
+- Responsibility for implement full CI/CD pipeline of multiple services (Build, Test, Release).
+- Introduce infrastructure-as-a-code to team using Terraform, Ansible, Dockerfile, GitHub/GitLab CI.
 - Strong knowledge on Developer & Operation Tools including  .Grafana, Kubernetes, CDN, ElasticSearch, Hadoop, Linux command etc.
 - Strong experience with Amazon Web Services, Google Cloud Platform (VMs, CDN, Load Balancer, DNS, Security).
 
@@ -42,10 +42,10 @@ Experience
 
 **Senior Developer, HotelQuickly** (2015 - 2017)
 
-- Live migrating backend systems from Amazon Web Service (AWS) to Google Cloud Platform (GCP) with minimal downtime.
+- Live migrating systems from Amazon Web Service (AWS) to Google Cloud Platform (GCP).
 - Introduce continuous integration and ensure development cycle is as fast as possible.
 - Ensure high system reliability by utilizing tools for monitoring, tracing and alerting.
-- Developing application using different programming language from Node.JS (ES6), PHP, React.
+- Developing application using different programming language from Node.JS, PHP, React.
 
 Education
 ---------

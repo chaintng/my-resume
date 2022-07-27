@@ -507,7 +507,7 @@ body>*:last-child {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 20px 0 10px;
+    margin: 10px 0 5px;
     padding: 0;
     font-weight: bold;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -521,7 +521,7 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 20px;
     border-bottom: 1px solid #ccc;
     color: #2DC4F7
 }
@@ -557,7 +557,8 @@ p, blockquote, table, pre {
 }
 
 ul {
-    padding-left: 30px
+    padding-left: 30px;
+    margin-top: 5px;
 }
 
 ol {
