@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     container: 
       image: kannkyo/pandoc-wkhtmltopdf
-      options: -v ${{ github.workspace }}:/build:rw
+      volumes:
+        - ${{ github.workspace }}:/build:rw
     steps:
       - uses: actions/checkout@v2
       - run: pwd
