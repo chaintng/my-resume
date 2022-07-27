@@ -7,6 +7,7 @@ jobs:
       image: kannkyo/pandoc-wkhtmltopdf
       options: -v ${{ github.workspace }}:/build:rw
     steps:
+      - uses: actions/checkout@v2
       - run: pwd
       - run: cd /build
       - run: pwd
