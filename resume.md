@@ -11,48 +11,43 @@ A software engineer who like cracking problem in a logical and creative way.
 Skills
 --------
 #### DevOps
-- Taking care of global-scale application backend. Monitor system reliability and availability yet cost effective to serve customer worldwide with the fluctuation in requests during the day. 
-- Proactive to solve live issue and investigating the root cause and come up with preventive action
-- Strong experience with AWS, GCP stacks (VMs, CDN, Load Balancer, DNS, Security)
-- Strong experience in Kubernetes Container Engine powered by GCP environment. 
-- Create comfortable environment to make developer deploy fast and often for each kinds of application (monolithic & microservices), using slack bots, Jenkins Pipeline and ansible playbook.
-- Setup tools to make developers notice live issue fast in order to have less impact to business. Using Pagerduty, NewRelic, Telegraf, Grafana, InfluxDB, Graylog, LogEntries etc.
+- Responsibility for implement full CI/CD pipeline of multiple services, both frontend and backend. (Build, Test, Release).
+- Introduce infrastructure-as-a-code to the team using Terraform, Ansible, Dockerfile, GitHub Action, GitLab CI.
+- Strong knowledge on Developer & Operation Tools including  .Grafana, Kubernetes, CDN, ElasticSearch, Hadoop, Linux command etc.
+- Strong experience with Amazon Web Services, Google Cloud Platform (VMs, CDN, Load Balancer, DNS, Security).
 
 #### Javascript / node.js
-- Building up new microservices using node.js to serve global-scale users. Make sure the response time is fast and able to handle high concurrency. Deliver work with test case coverage in order to make maintenance work easier.
-- Building React SPA website, using redux state management. Responsible of making the foundation of landing page hotel booking website. Part of react-boilerplate contributor team.
+- Building up new microservices using node.js to serve global-scale users, fast and support high concurrency. Deliver work with automated test (Unit, Contract, System Test, Load Test).
+- Building React SPA website, and its automated UI test including Cypress, Selenium and Playwright.
 
 #### Database
-- Deep understanding in SQL Query and Store Procedure (MySQL, Postgres, PostGIS)
-- Fair experience in NoSQL database (Redis, MongoDB, ElasticSearch)
-- Monitoring and investigating when database become bottlenecks of the system. Find the optimal way to increase its performance e.g. indexing, query optimization, restructuring.
-
-#### PHP
-- Expertise in ORM and OOP concept in various PHP framework: Nette, Yii, CodeIgnitor, Drupal
-- Investigation and dig deep down to find optimal way to increase application performance or finding bug using the right tools available.
+- Deep understanding in SQL Query and Store Procedure (MySQL, Postgres, PostGIS).
+- Fair experience in NoSQL database (Redis, MongoDB, ElasticSearch).
+- Database tuning: indexing, query optimization, restructuring.
 
 
 Experience
 ---------
+**Staff Software Engineer, Agoda Services Co., Ltd.** (2018 - Present)
+- Migrating old mobile website to new technology (Microservices, Single-page application).
+- Migrating code base to new GIT provider and new CI/CD tools.
+- Develop new feature in hotel booking system, both frontend and backend sub-services, with automated test (UI, API, Contract testing) (Langauge: C#, Javascript, Python, Scala).
+
 **Software Engineer, LINE Company (Thailand) Limited** (2017 - 2018)
-- Design migration plan of single-tenant to multi-tenant applications in less to zero downtime.
-- Find bottlenecks of current monolithic applications to make system handle higher concurrency.
-- Create ansible playbook to provisioning dependencies: Postgres w/PgBouncer-Replica, MySQL
-- Experiences in Rancher stacks for deployment each application in different environment.
+- Migrate high traffic live applications in less to zero downtime.
+- Investigate and improve current monolithic applications to support higher concurrency.
+- Working with Rancher stacks to ease application deployment process.
 
 **Senior Developer, HotelQuickly** (2015 - 2017)
 - Live migrating backend systems from Amazon Web Service (AWS) to Google Cloud Platform (GCP) with minimal downtime.
-Maintenance the overall system reliability and lowering single-point of failure by using Kubernetes Cluster on GCP.
-- Coaching team by hosting team sync every week to make sure everyone is on the same page with happiness. And also give heads up to the team with the team situation. Also available for consult when they have some obstacle from the challenge they confront.
-- Make sure that the team can have continuous integration and ensure that the cycle of deployment is as fast as possible
-- Taking care of live issue and make sure that the system is up and running with great reliability. Utilizing different tools for monitoring, tracing and alerting concerning lowest business damage.
-- Developing application using different programming language from Node.JS (ES6), PHP, React
+- Introduce continuous integration and ensure development cycle is as fast as possible.
+- Ensure high system reliability by utilizing tools for monitoring, tracing and alerting.
+- Developing application using different programming language from Node.JS (ES6), PHP, React.
 
 **Developer, Metamedia Technology** (2013 - 2015)
-- Manage team members using agile principle while developing Toyota’s projects running on Azure cloud. Developed by .NET language.
-- Developing “Bus Route Management System” for Department of Land Transport. The aim of the system is to digitize paper-based information to become GIS database as business intelligence for making decision on new bus route proposed.
-- Developing Business Intelligence Web Application using Pentaho as a dashboard for clients, Department of Foreign Trade, Ministry of Commerce, to see the organization's overview activity. Starting from design star schema, cleansing data, ETL Process, and develop the front-end web.
-- Developing Android application to support Department of Rural Road’s surveyors to collect repair and maintenance information of road components and synchronize them with server.
+- Developing “Bus Route Management System” for Department of Land Transport. A system that digitize paper-based information.
+- Developing Business Intelligence Web Application using Pentaho as a dashboard for Department of Foreign Trade.
+- Developing Android application to support Department of Rural Road’s surveyors.
 
 Education
 ---------
