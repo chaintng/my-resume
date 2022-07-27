@@ -13,7 +13,7 @@ Skills
 --------
 #### DevOps
 - Responsibility for implement full CI/CD pipeline of multiple services (Build, Test, Release).
-- Introduce infrastructure-as-a-code to team using Terraform, Ansible, Dockerfile, GitHub/GitLab CI.
+- Introduce infrastructure-as-Code to team using Terraform, Ansible, Dockerfile, GitHub/GitLab CI.
 - Strong knowledge on Developer & Operation Tools including  .Grafana, Kubernetes, CDN, ElasticSearch, Hadoop, Linux command etc.
 - Strong experience with Amazon Web Services, Google Cloud Platform (VMs, CDN, Load Balancer, DNS, Security).
 
@@ -50,6 +50,4 @@ Experience
 
 Education
 ---------
-**KMUTT, Thailand— Master Degree** (2012-2014)
-
-- Software Technology, School of Information Technology 
+**KMUTT, Thailand — Master Degree** (2014): Software Technology, School of Information Technology 
