@@ -10,5 +10,6 @@ jobs:
     steps:
       - run: pwd
       - run: cd /build
+      - run: pwd
       - run: ls
       - run: pandoc --help
