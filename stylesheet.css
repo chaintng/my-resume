@@ -457,6 +457,13 @@ html, body {
     padding-left: 1em;
     max-width: 44em;
     color: black;
+    position: relative;
+}
+
+img[alt="Photo"] {
+    width: 100px;
+    position: absolute;
+    right: 0px;
 }
 
 *:not('#mkdbuttons') {
