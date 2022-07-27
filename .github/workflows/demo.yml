@@ -12,22 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pandoc --help
-      - run: pandoc --standalone -c resume-css-stylesheet.css README.md -o resume.html
+      - run: pandoc --standalone -c stylesheet.css README.md -o resume.html
       ## TODO run on linux
       # - run: docker run 
       #     -v ${{ github.workspace }}:/build
       #     --entrypoint "sh -c"
       #     kannkyo/pandoc-wkhtmltopdf:latest 
       #     "pandoc -o resume.html -c resume-css-stylesheet.css README.md"
-      - run: ls
-      - run: wkhtmltopdf resume4.html resume.pdf 
+      ## TODO wkhtmltopdf doesn't work on 64bit
+      # - run: wkhtmltopdf resume4.html resume.pdf 
       - name: Upload Resume artifacts
         uses: actions/upload-artifact@v3
         with:
           name: resume
           path: |
+            stylesheet.css
             resume.html
-            resume.pdf 
       ## TODO Deploy in Pages
       # - name: Deploy 🚀
       #   uses: JamesIves/github-pages-deploy-action@v4
