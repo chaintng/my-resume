@@ -58,7 +58,7 @@ jobs:
         with:
           name: resume
       - run: ls
-      - run: wkhtmltopdf resume.html resume.pdf 
+      - run: docker run -v ${pwd}:./ openlabs/docker-wkhtmltopdf resume.html resume.pdf 
       - name: Upload Resume artifacts
         uses: actions/upload-artifact@v3
         with:
