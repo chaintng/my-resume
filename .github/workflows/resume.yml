@@ -3,34 +3,52 @@
 name: Create Resume
 on: [push]
 jobs:
-  build_resume:
+  build_resume_html:
     runs-on: ubuntu-latest
     container: 
-      image: kannkyo/pandoc-wkhtmltopdf
+      image: pandoc/core:latest
       volumes:
         - ${{ github.workspace }}:/build:rw
     steps:
       - uses: actions/checkout@v2
       - run: pandoc --help
-      - run: pandoc --standalone -c stylesheet.css README.md -o resume.html
-      ## TODO run on linux
-      # - run: docker run 
-      #     -v ${{ github.workspace }}:/build
-      #     --entrypoint "sh -c"
-      #     kannkyo/pandoc-wkhtmltopdf:latest 
-      #     "pandoc -o resume.html -c resume-css-stylesheet.css README.md"
-      ## TODO wkhtmltopdf doesn't work on 64bit
-      # - run: wkhtmltopdf resume4.html resume.pdf 
+      - run: pandoc --standalone --metadata pagetitle="RESUME" -c stylesheet.css README.md -o resume.html
       - name: Upload Resume artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: resume
+          name: resume_html
           path: |
             stylesheet.css
             resume.html
             photo.jpg
-      ## TODO Deploy in Pages
-      # - name: Deploy 🚀
-      #   uses: JamesIves/github-pages-deploy-action@v4
-      #   with:
-      #     folder: build # The folder the action should deploy.
+  build_resume_pdf:
+    needs: build_resume_html
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: resume_html
+      - run: ls
+      - run: docker run -v `pwd`:/build surnet/alpine-wkhtmltopdf:3.15.0-0.12.6-full --zoom 1.2 --enable-local-file-access /build/resume.html /build/resume.pdf 
+      - name: Upload Resume artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume_pdf
+          path: |
+            resume.pdf
+  deploy_to_pages:
+    needs: build_resume_html
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: resume_html
+          path: build
+      - run: mv resume.html index.html
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
