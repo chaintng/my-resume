@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pandoc --help
-      - run: pandoc --standalone -c stylesheet.css README.md -o resume.html
+      - run: pandoc --standalone --metadata pagetitle="RESUME" -c stylesheet.css README.md -o resume.html
+      - run: pandoc -f gfm -t html5 --metadata pagetitle="RESUME" -c stylesheet.css README.md -o resume.pdf
       ## TODO run on linux
       # - run: docker run 
       #     -v ${{ github.workspace }}:/build
@@ -27,6 +28,7 @@ jobs:
           name: resume
           path: |
             stylesheet.css
+            resume.pdf
             resume.html
             photo.jpg
       ## TODO Deploy in Pages
