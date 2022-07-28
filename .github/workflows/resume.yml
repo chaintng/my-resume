@@ -47,7 +47,7 @@ jobs:
         with:
           name: resume_html
           path: build
-      - run: ls build
+      - run: mv resume.html index.html
       ## TODO Deploy in Pages
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
