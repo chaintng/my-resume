@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: pandoc --help
       - run: pandoc --standalone --metadata pagetitle="RESUME" -c stylesheet.css README.md -o resume.html
-      - run: pandoc -f gfm -t html5 --metadata pagetitle="RESUME" -c stylesheet.css README.md -o resume.pdf
+      # - run: pandoc -f gfm -t html5 --metadata pagetitle="RESUME" -c stylesheet.css README.md -o resume.pdf
       ## TODO run on linux
       # - run: docker run 
       #     -v ${{ github.workspace }}:/build
@@ -42,7 +42,6 @@ jobs:
           name: resume
           path: |
             stylesheet.css
-            resume.pdf
             resume.html
             photo.jpg
       ## TODO Deploy in Pages
@@ -50,3 +49,19 @@ jobs:
       #   uses: JamesIves/github-pages-deploy-action@v4
       #   with:
       #     folder: build # The folder the action should deploy.
+  build_pdf:
+    needs: build_resume
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: resume
+      - run: ls
+      - run: wkhtmltopdf resume.html resume.pdf 
+      - name: Upload Resume artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume_pdf
+          path: |
+            resume.pdf
