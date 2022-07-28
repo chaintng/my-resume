@@ -3,7 +3,7 @@
 Chainarong Tangsurakit
 ======
 
-*Remark: This resume was generated using GitLab Action CI/CD*
+*Remark: This resume was generated using [GitHub Action CI/CD](https://github.com/chaintng/my-resume)*
 
 A software engineer who like cracking problem in a logical and creative way.
 
@@ -16,7 +16,7 @@ Skills
 #### DevOps
 - Responsibility for implement full CI/CD pipeline of multiple services (Build, Test, Release).
 - Introduce infrastructure-as-Code to team (Terraform, Ansible, Dockerfile, GitHub/GitLab CI).
-- Strong knowledge on Developer & Operation Tools including  .Grafana, Kubernetes, CDN, ElasticSearch, Hadoop, Linux command etc.
+- Strong knowledge on Developer & Operation Tools including Grafana, Kubernetes, CDN, ElasticSearch, Hadoop, Linux command etc.
 - Strong experience with Amazon Web Services, Google Cloud Platform.
 
 #### Javascript / node.js
