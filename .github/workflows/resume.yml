@@ -46,9 +46,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: html_resume
-          path: /build
+          path: build
       ## TODO Deploy in Pages
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: /build
+          folder: build
