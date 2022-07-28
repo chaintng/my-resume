@@ -58,6 +58,7 @@ jobs:
         with:
           name: resume
       - run: ls
+      - run: docker run -v ${pwd}:/build ghcr.io/chaintng/pandoc-wkhtml:latest ls
       - run: docker run -v ${pwd}:/build ghcr.io/chaintng/pandoc-wkhtml:latest resume.html resume.pdf 
       - name: Upload Resume artifacts
         uses: actions/upload-artifact@v3
