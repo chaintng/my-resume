@@ -4,15 +4,18 @@ name: Create Resume
 on: [push]
 jobs:
   build_image:
-    - name: Build the docker image
-      run: |
-        export TAG=${GITHUB_SHA:0:8}
-        echo "$DOCKER_PASSWORD" | docker login ghcr.io -u "$DOCKER_USERNAME" --password-stdin
-        docker build -t ghcr.io/chaintng/pandoc-wkhtml:latest .
-        docker push ghcr.io/chaintng/pandoc-wkhtml:latest
-      env:
-        DOCKER_USERNAME: ${{ github.repository }}
-        DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the docker image
+        run: |
+          export TAG=${GITHUB_SHA:0:8}
+          echo "$DOCKER_PASSWORD" | docker login ghcr.io -u "$DOCKER_USERNAME" --password-stdin
+          docker build -t ghcr.io/chaintng/pandoc-wkhtml:latest .
+          docker push ghcr.io/chaintng/pandoc-wkhtml:latest
+        env:
+          DOCKER_USERNAME: ${{ github.repository }}
+          DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
   build_resume:
     runs-on: ubuntu-latest
     container: 
