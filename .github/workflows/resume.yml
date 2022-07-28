@@ -30,7 +30,7 @@ jobs:
         with:
           name: html_resume
       - run: ls
-      - run: docker run -v `pwd`:/build surnet/alpine-wkhtmltopdf:3.15.0-0.12.6-full --zoom 1.2 --enable-local-file-access resume.html resume.pdf 
+      - run: docker run -v `pwd`:/build surnet/alpine-wkhtmltopdf:3.15.0-0.12.6-full --zoom 1.2 --enable-local-file-access /build/resume.html resume.pdf 
       - name: Upload Resume artifacts
         uses: actions/upload-artifact@v3
         with:
