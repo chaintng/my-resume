@@ -41,12 +41,14 @@ jobs:
     needs: build_html_resume
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: html_resume
+          path: /build
       ## TODO Deploy in Pages
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./
+          folder: /build
