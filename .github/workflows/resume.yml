@@ -8,8 +8,8 @@ jobs:
       run: |
         export TAG=${GITHUB_SHA:0:8}
         echo "$DOCKER_PASSWORD" | docker login ghcr.io -u "$DOCKER_USERNAME" --password-stdin
-        docker build -t ghcr.io/chaintng/pandoc-wkhtml .
-        docker push ghcr.io/chaintng/pandoc-wkhtml
+        docker build -t ghcr.io/chaintng/pandoc-wkhtml:latest .
+        docker push ghcr.io/chaintng/pandoc-wkhtml:latest
       env:
         DOCKER_USERNAME: ${{ github.repository }}
         DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
