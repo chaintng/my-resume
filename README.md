@@ -16,12 +16,12 @@ Skills
 #### DevOps
 - Responsibility for implement full CI/CD pipeline of multiple services (Build, Test, Release).
 - Introduce infrastructure-as-Code to team (Terraform, Ansible, Dockerfile, GitHub/GitLab CI).
-- Strong knowledge on Developer & Operation Tools including Grafana, Kubernetes, CDN, ElasticSearch, Hadoop, Linux command etc.
+- Strong knowledge on Site Reliability Engineering & DevOps Tools including Grafana, Kubernetes, CDN, ElasticSearch, Hadoop, Linux command etc.
 - Strong experience with Amazon Web Services, Google Cloud Platform.
 
 #### Javascript / node.js
 - Building up new microservices using node.js to serve global-scale users, fast and support high concurrency. Deliver work with automated test (Unit, Contract, System Test, Load Test).
-- Building React website, and its automated UI test including Cypress, Selenium and Playwright.
+- Building React website, and automated UI test including Cypress, Selenium and Playwright.
 
 #### Database
 - Deep understanding in SQL Query and Store Procedure (MySQL, Postgres, PostGIS).
