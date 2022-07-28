@@ -58,7 +58,7 @@ jobs:
         with:
           name: resume
       - run: ls
-      - run: docker run -v ${pwd}:/build ghcr.io/chaintng/pandoc-wkhtml:latest --allow --enable-local-file-access resume.html resume.pdf 
+      - run: docker run -v ${pwd}:/build ghcr.io/chaintng/pandoc-wkhtml:latest --allow --enable-local-file-access file://resume.html resume.pdf 
       - name: Upload Resume artifacts
         uses: actions/upload-artifact@v3
         with:
