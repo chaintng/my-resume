@@ -6,7 +6,7 @@ jobs:
   build_resume:
     runs-on: ubuntu-latest
     container: 
-      image: kannkyo/pandoc-wkhtmltopdf
+      image: pandoc/ubuntu-latex
       volumes:
         - ${{ github.workspace }}:/build:rw
     steps:
