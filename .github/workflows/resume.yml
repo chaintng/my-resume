@@ -20,7 +20,7 @@ jobs:
     needs: build_image
     runs-on: ubuntu-latest
     container: 
-      image: ghcr.io/chaintng/pandoc-wkhtml
+      image: pandoc/core:latest
       volumes:
         - ${{ github.workspace }}:/build:rw
     steps:
@@ -58,7 +58,7 @@ jobs:
         with:
           name: resume
       - run: ls
-      - run: docker run -v ${pwd}:./ surnet/alpine-wkhtmltopdf:3.15.0-0.12.6-full resume.html resume.pdf 
+      - run: docker run -v ${pwd}:/build ghcr.io/chaintng/pandoc-wkhtml:latest resume.html resume.pdf 
       - name: Upload Resume artifacts
         uses: actions/upload-artifact@v3
         with:
