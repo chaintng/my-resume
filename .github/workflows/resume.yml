@@ -47,7 +47,7 @@ jobs:
         with:
           name: resume_html
           path: build
-      - run: mv resume.html index.html
+      - run: mv build/resume.html build/index.html
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
